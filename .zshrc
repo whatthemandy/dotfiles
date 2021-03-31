@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 source ~/.aliases
+# NOTE: to set up co alias, run: git config --global alias.co checkout
 
 # smart command history
 bindkey "^[[A" history-beginning-search-backward
@@ -116,3 +117,14 @@ bindkey "^[[B" history-beginning-search-forward
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# thefuck
+eval $(thefuck --alias)
+
+# don't share history among iterm shells
+unsetopt share_history
