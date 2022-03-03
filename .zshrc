@@ -8,7 +8,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-echo "Loading ~/.zshrc -- a cute li'l shell script"
+echo "Loading ~/.zshrc -- a shell script"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/mando/.oh-my-zsh"
@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='subl -w'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -122,9 +123,6 @@ bindkey "^[[B" history-beginning-search-forward
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-# thefuck
-eval $(thefuck --alias)
 
 # don't share history among iterm shells
 unsetopt share_history

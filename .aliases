@@ -1,15 +1,25 @@
 alias be="bundle exec"
+alias brs="be rails s"
+alias brc="be rails c"
 alias gco="git checkout"
 alias gs="git status"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gb="git branch"
+alias grh="git reset HEAD"
+alias gpom="git pull origin master && bundle && yarn && be rake db:migrate"
 alias gcp="git cherry-pick"
+alias bspec="BROWSER=chrome NO_RETRY=1 bin/rspec"
 alias ks="pkill -9 -f puma"
 alias ss="spring stop"
+alias stash="git stash"
+alias pop="git stash pop"
 alias js="bundle exec rake jobs:work"
 alias uuid="RUBYOPT='-W0' rails runner 'p SecureRandom.uuid'"
 alias resettestdb="be rake db:drop RAILS_ENV=test && be rake db:create RAILS_ENV=test && be rake db:migrate RAILS_ENV=test && be rake db:seed RAILS_ENV=test"
 alias fresh="clear && git status"
 alias refresh="spring stop && rails runner Rails.cache.clear && be rails s"
-alias gg='open "http://github.com/REPO-NAME/${PWD##*/}"'
+alias yolo="bundle exec rake dev:db:reset"
+
+# add repo name:
+alias gg='open "http://github.com/{REPO-NAME}/${PWD##*/}"'
